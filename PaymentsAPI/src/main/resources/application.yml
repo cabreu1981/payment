@@ -1,0 +1,29 @@
+server:
+  port: 8081
+  error:
+    enabled: true
+
+spring:
+  application:
+    name: Payments-service
+
+
+  datasource:
+    username: 'getontop'
+    url: jdbc:postgresql://localhost:5432/payments
+    password: 'getontop1234'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+
